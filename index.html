@@ -6,18 +6,16 @@
     <title>Document</title>
   </head>
   <body>
-    <img src="#" />
     <script>
-      const img = document.querySelector("img");
       fetch(
-        "https://api.giphy.com/v1/gifs/translate?api_key=qHG9ETIbNDtb2uydj61ffNl79ISO0NEr&s=cats",
+        "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/london?key=4SNFWHNHU9F9L32MMYS86KJ7J",
         { mode: "cors" }
       )
         .then(function (response) {
           return response.json();
         })
         .then(function (response) {
-          img.src = response.data.images.original.url;
+          console.log(response);
         });
     </script>
   </body>
