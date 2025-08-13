@@ -15,7 +15,23 @@
           return response.json();
         })
         .then(function (response) {
+          // For displaying the object during development
+          /*
           console.log(response);
+          */
+
+          // display conditions
+          console.log(
+            `It is currently ${
+              response.currentConditions.conditions
+            } in ${response.address.toUpperCase()}`
+          );
+          // display temperature
+          console.log(
+            `The temperature is ${response.currentConditions.temp} fahrenheit`
+          );
+          // display time
+          console.log(`At ${response.currentConditions.datetime}`);
         });
     </script>
   </body>
